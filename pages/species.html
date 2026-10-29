@@ -12,12 +12,7 @@
         <script src="../js/species-directory.js" defer></script>
     </head>
 
-    <body
-        data-page="species"
-        data-title="Species"
-        data-subtitle="The diversity of the living world"
-        data-kicker="The Kaimere Encyclopedia"
-    >
+    <body data-page="species" data-title="Species" data-subtitle="The Diversity of the Living World" data-kicker="The Kaimere Encyclopedia">
         <div data-site-header data-root="../"></div>
         <div data-site-nav data-root="../"></div>
 
@@ -48,17 +43,15 @@
             <!-- DIRECTORY INTRODUCTION -->
             <section class="species-introduction">
                 <div class="species-content-width">
+
                     <p class="species-eyebrow">A GUIDE TO THE FAUNA</p>
-
-                    <h2>Discover the animals of Kaimere</h2>
-
+                    <h2>Discover the Animals of Kaimere</h2>
                     <p class="species-lead">
                         The fauna of Kaimere encompasses an extraordinary
                         assemblage of introduced Earth organisms, their
                         descendants, and endemic lineages that have evolved
                         within the planet's distinctive environments.
                     </p>
-
                     <p>
                         This directory organizes the encyclopedia's animal
                         accounts into major groups and taxonomic lineages.
@@ -67,7 +60,6 @@
                         history, and known diversity. From there, readers
                         can explore individual species and their natural histories.
                     </p>
-
                     <p>
                         Search by common name, scientific name, or related
                         term, or browse the directory alphabetically.
@@ -77,10 +69,11 @@
 
             <!-- CATEGORY SHORTCUTS -->
             <section class="species-category-section">
+
                 <div class="species-content-width">
                     <div class="species-section-heading">
                         <p class="species-eyebrow">CLASSIFICATION</p>
-                        <h2>Browse by animal group</h2>
+                        <h2>Browse by Animal Group</h2>
                         <p>
                             Begin with a major group to narrow the directory
                             to a particular branch of the animal kingdom.
@@ -89,6 +82,7 @@
 
                     <div class="species-category-grid">
 
+                        <!--DINOSAURS-->
                         <button class="species-category"
                                 type="button" data-category-shortcut="dinosaurs">
                             <span class="category-number">01</span>
@@ -98,24 +92,27 @@
                             </span>
                         </button>
 
+                        <!--MAMMALS-->
                         <button class="species-category"
                                 type="button" data-category-shortcut="mammals">
                             <span class="category-number">02</span>
                             <span class="category-name">Mammals</span>
                             <span class="category-description">
-                                Carnivores, ungulates, and other mammals
+                                Primates, ungulates, and other mammals
                             </span>
                         </button>
 
+                        <!--REPTILES-->
                         <button class="species-category"
                                 type="button" data-category-shortcut="reptiles">
                             <span class="category-number">03</span>
-                            <span class="category-name">Other reptiles</span>
+                            <span class="category-name">Reptiles</span>
                             <span class="category-description">
                                 Crocodylians, lizards, and other reptiles
                             </span>
                         </button>
 
+                        <!--BIRDS-->
                         <button class="species-category"
                                 type="button" data-category-shortcut="birds">
                             <span class="category-number">04</span>
@@ -125,57 +122,83 @@
                             </span>
                         </button>
 
+                        <!--PTEROSAURS-->
                         <button class="species-category"
                                 type="button" data-category-shortcut="pterosaurs">
                             <span class="category-number">05</span>
                             <span class="category-name">Pterosaurs</span>
                             <span class="category-description">
-                                Flying reptiles and their radiations
+                                Flying endothermic reptiles and their radiations
                             </span>
                         </button>
 
+                        <!--AMPHIBIANS-->
+                        <button class="species-category"
+                                type="button" data-category-shortcut="amphibians">
+                            <span class="category-number">06</span>
+                            <span class="category-name">Amphibians</span>
+                            <span class="category-description">
+                                Semi-aquatic lineages of amphibians from Earth.
+                            </span>
+                        </button>
+
+                        <!--FISH-->
                         <button class="species-category"
                                 type="button" data-category-shortcut="fish">
-                            <span class="category-number">06</span>
+                            <span class="category-number">07</span>
                             <span class="category-name">Fish</span>
                             <span class="category-description">
                                 Aquatic vertebrates and marine lineages
                             </span>
                         </button>
 
+                        <!--SYNAPSIDS-->
                         <button class="species-category"
                                 type="button" data-category-shortcut="synapsids">
-                            <span class="category-number">07</span>
-                            <span class="category-name">Other synapsids</span>
+                            <span class="category-number">08</span>
+                            <span class="category-name">Synapsids</span>
                             <span class="category-description">
                                 Therapsids and non-mammalian synapsids
                             </span>
                         </button>
 
+                        <!--ARTHROPODS-->
                         <button class="species-category"
                                 type="button" data-category-shortcut="arthropods">
-                            <span class="category-number">08</span>
+                            <span class="category-number">09</span>
                             <span class="category-name">Arthropods</span>
                             <span class="category-description">
-                                Trilobites and other segmented animals
+                                Trilobites, chelicerates and other segmented animals
                             </span>
                         </button>
 
+                        <!--KETS-->
                         <button class="species-category"
                                 type="button" data-category-shortcut="basal-tetrapods">
-                            <span class="category-number">09</span>
-                            <span class="category-name">Endemic tetrapods</span>
+                            <span class="category-number">10</span>
+                            <span class="category-name">KET's</span>
                             <span class="category-description">
-                                Native lineages of terrestrial vertebrates
+                                Kaimeran endemic tetrapods descended from Earth.
                             </span>
                         </button>
 
+                        <!--KAIMERAN LIFE-->
                         <button class="species-category"
-                                type="button" data-category-shortcut="invertebrates">
-                            <span class="category-number">10</span>
-                            <span class="category-name">Other invertebrates</span>
+                                type="button" data-category-shortcut="endemic-life">
+                            <span class="category-number">11</span>
+                            <span class="category-name">Kaimeran Life</span>
                             <span class="category-description">
-                                Invertebrate groups beyond arthropods
+                                Kaimeran endemic life that originated on Kaimere. 
+                            </span>
+                        </button>
+
+                        <!--MOLLUSKS-->
+                        <button class="species-category"
+                                type="button" data-category-shortcut="mollusks">
+                            <span class="category-number">12</span>
+                            <span class="category-name">Mollusks</span>
+                            <span class="category-description">
+                                Gastropods, bivalves, and cephalopods.
                             </span>
                         </button>
 
@@ -189,8 +212,7 @@
                 <div class="species-content-width">
 
                     <p class="species-eyebrow">THE ENCYCLOPEDIA INDEX</p>
-                    <h2>Animal groups and families</h2>
-
+                    <h2>Animal Groups and Families</h2>
                     <p>
                         Explore recognized families, orders, and evolutionary
                         lineages. Each entry leads to a dedicated article
@@ -201,7 +223,7 @@
 
                         <div class="species-search-field">
                             <label for="speciesSearch">
-                                Search the directory
+                                Search the Directory
                             </label>
 
                             <input
@@ -214,21 +236,23 @@
 
                         <div class="species-search-field">
                             <label for="speciesCategory">
-                                Animal group
+                                Animal Group
                             </label>
 
                             <select id="speciesCategory">
-                                <option value="all">All animal groups</option>
+                                <option value="all">All Animal Groups</option>
                                 <option value="dinosaurs">Dinosaurs</option>
                                 <option value="mammals">Mammals</option>
-                                <option value="reptiles">Other reptiles</option>
+                                <option value="reptiles">Reptiles</option>
                                 <option value="birds">Birds</option>
                                 <option value="pterosaurs">Pterosaurs</option>
                                 <option value="fish">Fish</option>
-                                <option value="synapsids">Other synapsids</option>
+                                <option value="amphibians">Amphibians</option>
+                                <option value="synapsids">Synapsids</option>
                                 <option value="arthropods">Arthropods</option>
-                                <option value="basal-tetrapods">Endemic tetrapods</option>
-                                <option value="invertebrates">Other invertebrates</option>
+                                <option value="basal-tetrapods">KET's</option>
+                                <option value="endemic-life">Kaimeran Life</option>
+                                <option value="mollusks">Mollusks</option>
                             </select>
                         </div>
 
@@ -305,7 +329,6 @@
                             data-type="Family"
                             data-search="dogs wolves foxes carnivora predators omnivores"
                             data-url="../taxonomy/mammal-families/canidae.html">
-
                             <span class="species-entry-label">Mammals · Family</span>
                             <h3>Canids</h3>
                             <p class="species-scientific"><i>Canidae</i></p>
@@ -463,14 +486,14 @@
 
                         <!-- DINOSAURS -->
 
+                        <!-- MEGARAPTORS -->
                         <article class="species-entry"
                             data-name="Megaraptorans"
                             data-scientific="Megaraptora"
                             data-category="dinosaurs"
                             data-type="Clade"
-                            data-search="megaraptorans megaraptors theropods predators large claws dinosaurs"
+                            data-search="megaraptorans megaraptors theropods predators large claws zentaur uktan ba'khar dinosaurs"
                             data-url="../taxonomy/dinosaur-groups/megaraptora.html">
-
                             <span class="species-entry-label">Dinosaurs · Clade</span>
                             <h3>Megaraptorans</h3>
                             <p class="species-scientific"><i>Megaraptora</i></p>
@@ -489,6 +512,7 @@
                             </a>
                         </article>
 
+                        <!-- THESCELOSAURS -->
                         <article class="species-entry"
                             data-name="Thescelosaurs"
                             data-scientific="Thescelosauridae"
@@ -515,6 +539,7 @@
                             </a>
                         </article>
 
+                        <!-- TITANOSAURS -->
                         <article class="species-entry"
                             data-name="Titanosaurs"
                             data-scientific="Titanosauria"
@@ -543,6 +568,7 @@
 
                         <!-- BIRDS -->
 
+                        <!-- ACCIPITERS -->
                         <article class="species-entry"
                             data-name="Accipitriformes"
                             data-scientific="Accipitriformes"
@@ -550,7 +576,6 @@
                             data-type="Order"
                             data-search="hawks eagles vultures ospreys birds of prey"
                             data-url="../taxonomy/bird-groups/accipitriformes.html">
-
                             <span class="species-entry-label">Birds · Order</span>
                             <h3>Accipitriformes</h3>
                             <p class="species-scientific"><i>Accipitriformes</i></p>
@@ -568,6 +593,7 @@
                             </a>
                         </article>
 
+                        <!-- CARIMAE -->
                         <article class="species-entry"
                             data-name="Cariamiformes"
                             data-scientific="Cariamiformes"
@@ -594,8 +620,9 @@
                             </a>
                         </article>
 
-                        <!-- OTHER REPTILES -->
+                        <!-- REPTILES -->
 
+                        <!-- CROCODYLIANS -->
                         <article class="species-entry"
                             data-name="Crocodylians"
                             data-scientific="Crocodylia"
@@ -603,7 +630,6 @@
                             data-type="Order"
                             data-search="crocodiles alligators gharials crocodilians pseudosuchia"
                             data-url="../taxonomy/reptile-groups/crocodylia.html">
-
                             <span class="species-entry-label">Reptiles · Order</span>
                             <h3>Crocodylians</h3>
                             <p class="species-scientific"><i>Crocodylia</i></p>
@@ -624,6 +650,7 @@
 
                         <!-- PTEROSAURS -->
 
+                        <!-- AZDARCHIDS -->
                         <article class="species-entry"
                             data-name="Azhdarchids"
                             data-scientific="Azhdarchidae"
@@ -652,6 +679,7 @@
 
                         <!-- FISH -->
 
+                        <!-- SHARKS -->
                         <article class="species-entry"
                             data-name="Sharks"
                             data-scientific="Selachimorpha"
@@ -680,6 +708,7 @@
 
                         <!-- ARTHROPODS -->
 
+                        <!-- TRILOBITES -->
                         <article class="species-entry"
                             data-name="Trilobites"
                             data-scientific="Trilobita"
@@ -706,8 +735,9 @@
                             </a>
                         </article>
 
-                        <!-- ENDEMIC LINEAGES -->
+                        <!-- ENDEMIC TETRAPODS -->
 
+                        <!-- CARBOSUCHIANS -->
                         <article class="species-entry"
                             data-name="Carbosuchians"
                             data-scientific="Carbosuchia"
@@ -715,7 +745,6 @@
                             data-type="Clade"
                             data-search="native endemic tetrapods semiaquatic ambush predators"
                             data-url="../taxonomy/endemic-groups/carbosuchia.html">
-
                             <span class="species-entry-label">Endemic tetrapods · Clade</span>
                             <h3>Carbosuchians</h3>
                             <p class="species-scientific"><i>Carbosuchia</i></p>
