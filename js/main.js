@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("Main.js loaded");
     const headerSlot = document.querySelector("[data-site-header]");
     const navSlot = document.querySelector("[data-site-nav]");
     const footerSlot = document.querySelector("[data-site-footer]");
@@ -33,12 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             id: "people-culture",
             label: "People & Culture",
-            url: "pages/people-culture.html"
+            url: "pages/people_culture.html"
         },
         {
-            id: "about-kaimere",
+            id: "about",
             label: "About Kaimere",
-            url: "pages/about-kaimere.html"
+            url: "pages/about.html"
         }
     ];
 

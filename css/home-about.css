@@ -1,0 +1,240 @@
+/* HOME + ABOUT PAGE STYLES
+   Uses the same plum gradient, warm paper surfaces, serif typography,
+   violet/orange accents, and square editorial cards as species.css. */
+
+.home-page,
+.about-page {
+    background: var(--ivory);
+    color: var(--ink);
+}
+
+.home-hero,
+.about-hero {
+    background: linear-gradient(115deg, #291d32 0%, #493452 65%, #644a6b 100%);
+    color: var(--ivory);
+    padding: clamp(68px, 10vw, 125px) 20px;
+    border-bottom: 4px solid var(--orange);
+    text-align: center;
+}
+
+.home-hero-inner,
+.about-hero-inner {
+    width: min(940px, 100%);
+    margin: 0 auto;
+}
+
+.home-eyebrow,
+.about-eyebrow {
+    color: var(--gold);
+    font-size: .91rem;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.home-hero h2,
+.about-hero h2 {
+    color: var(--ivory);
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1.08;
+    margin: 0 auto 24px;
+}
+
+.home-hero-inner > p:not(.home-eyebrow),
+.about-hero-inner > p:not(.about-eyebrow) {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    color: #e5d9e8;
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+    line-height: 1.65;
+}
+
+.home-hero .button,
+.about-hero .button {
+    display: inline-block;
+    padding: 10px 22px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--ivory);
+    font-family: var(--body-font);
+    transition: background .2s ease, color .2s ease;
+}
+
+.home-hero .button:hover,
+.about-hero .button:hover {
+    background: var(--gold);
+    color: var(--plum);
+}
+
+.home-section,
+.about-section {
+    padding: 68px 0;
+}
+
+.home-section-inner,
+.about-section-inner {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.home-section--paper,
+.about-section--paper {
+    background: var(--paper);
+}
+
+.home-section--sand,
+.about-section--sand {
+    background: #eee5da;
+}
+
+.home-section-eyebrow,
+.about-section-eyebrow {
+    color: var(--orange);
+    font-size: .91rem;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+}
+
+.home-section h2,
+.about-section h2 {
+    color: var(--plum);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 22px;
+}
+
+.home-section .lead,
+.about-section .lead {
+    max-width: 930px;
+    font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+    line-height: 1.7;
+}
+
+.home-section p,
+.about-section p {
+    max-width: 960px;
+}
+
+.home-card-grid,
+.about-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.home-card,
+.about-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--orange);
+    color: var(--ink);
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.home-card:hover,
+.about-card:hover {
+    transform: translateY(-3px);
+    border-top-color: var(--violet);
+    box-shadow: 0 7px 20px #291d3210;
+}
+
+.home-card:focus-within,
+.about-card:focus-within {
+    outline: 2px solid var(--orange);
+    outline-offset: 3px;
+}
+
+.home-card h3,
+.about-card h3 {
+    color: var(--plum);
+    font-size: 1.65rem;
+    line-height: 1.2;
+    margin: 0 0 10px;
+}
+
+.home-card p,
+.about-card p {
+    color: var(--muted);
+    margin: 0 0 18px;
+}
+
+.home-card-link,
+.about-card-link {
+    margin-top: auto;
+    color: var(--orange);
+    font-weight: 600;
+}
+
+.home-card-link:hover,
+.about-card-link:hover {
+    color: var(--violet);
+}
+
+.about-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.about-fact {
+    padding: 21px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--orange);
+}
+
+.about-fact h3 {
+    color: var(--plum);
+    font-size: 1.4rem;
+    margin: 0 0 8px;
+}
+
+.about-fact p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.about-continue-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.about-continue-links a {
+    display: inline-block;
+    padding: 9px 15px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--orange);
+    color: var(--plum);
+}
+
+.about-continue-links a:hover {
+    border-left-color: var(--violet);
+    color: var(--orange);
+}
+
+@media (max-width: 900px) {
+    .about-facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .home-card-grid, .about-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+    .home-card-grid, .about-card-grid, .about-facts-grid { grid-template-columns: 1fr; }
+    .home-section, .about-section { padding: 48px 0; }
+    .home-section-inner, .about-section-inner { width: min(100% - 28px, 1160px); }
+}

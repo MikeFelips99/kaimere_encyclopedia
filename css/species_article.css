@@ -1,0 +1,361 @@
+/* =========================================================
+   KAIMERE ENCYCLOPEDIA — SPECIES ARTICLE
+   File: css/species_article.css
+   ========================================================= */
+
+/* Article layout */
+.species-article {
+    width: min(1180px, calc(100% - 2rem));
+    margin: 2.5rem auto 4rem;
+    color: var(--ink, #292522);
+    line-height: 1.75;
+}
+
+.species-title {
+    margin: 0 0 1.75rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--line, #d8d0c5);
+}
+
+.species-kicker {
+    margin: 0 0 0.4rem;
+    color: var(--muted, #756e67);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.species-title h2 {
+    margin: 0;
+    font-family: var(--heading-font, Georgia, serif);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.12;
+}
+
+.species-subtitle {
+    margin: 0.65rem 0 0;
+    color: var(--muted, #756e67);
+    font-size: 1.15rem;
+}
+
+.species-scientific-name {
+    margin: 0.35rem 0 0;
+    font-size: 1rem;
+}
+
+/* Main illustration + taxonomy */
+.species-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.85fr);
+    align-items: start;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.species-main-image {
+    min-width: 0;
+    margin: 0;
+}
+
+.species-main-image img {
+    display: block;
+    width: 100%;
+    max-height: 680px;
+    object-fit: contain;
+    border: 1px solid var(--line, #d8d0c5);
+    border-radius: 8px;
+    background: var(--paper, #f5f0e7);
+}
+
+.species-main-image figcaption,
+.article-image figcaption {
+    margin-top: 0.55rem;
+    color: var(--muted, #756e67);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.taxonomy-box {
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--line, #d8d0c5);
+    border-radius: 8px;
+    background: var(--paper, #f5f0e7);
+}
+
+.taxonomy-box h3 {
+    margin: 0 0 0.85rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--line, #d8d0c5);
+    font-family: var(--heading-font, Georgia, serif);
+    font-size: 1.35rem;
+}
+
+.taxonomy-row {
+    display: grid;
+    grid-template-columns: minmax(85px, 0.75fr) minmax(0, 1.25fr);
+    gap: 0.65rem;
+    padding: 0.48rem 0;
+    border-bottom: 1px solid var(--line, #d8d0c5);
+    font-size: 0.93rem;
+}
+
+.taxonomy-row:last-child {
+    border-bottom: 0;
+}
+
+.taxonomy-row strong {
+    color: var(--muted, #756e67);
+}
+
+.taxonomy-row span {
+    overflow-wrap: anywhere;
+}
+
+/* Quick facts strip */
+.quick-facts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin: 1.75rem 0 2.5rem;
+    overflow: hidden;
+    border: 1px solid var(--line, #d8d0c5);
+    border-radius: 8px;
+    background: var(--line, #d8d0c5);
+}
+
+.quick-facts > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+    padding: 1rem;
+    background: var(--paper, #f5f0e7);
+}
+
+.quick-facts strong {
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.quick-facts span {
+    font-size: 0.94rem;
+    overflow-wrap: anywhere;
+}
+
+/* Main article text */
+.article-section {
+    margin: 2.5rem 0;
+    scroll-margin-top: 2rem;
+}
+
+.article-section > h3,
+.related-species > h3 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--line, #d8d0c5);
+    font-family: var(--heading-font, Georgia, serif);
+    font-size: clamp(1.45rem, 3vw, 1.9rem);
+    line-height: 1.3;
+}
+
+.article-section p {
+    margin: 0 0 1.1rem;
+}
+
+.article-subsection {
+    margin: 2rem 0;
+}
+
+.article-subsection h4 {
+    margin: 0 0 0.8rem;
+    font-family: var(--heading-font, Georgia, serif);
+    font-size: 1.25rem;
+}
+
+/* Supporting images inside article sections */
+.article-image {
+    margin: 1.5rem auto;
+    max-width: 900px;
+}
+
+.article-image img {
+    display: block;
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    border: 1px solid var(--line, #d8d0c5);
+    border-radius: 8px;
+    background: var(--paper, #f5f0e7);
+}
+
+/* Clickable / keyboard-accessible images */
+.zoomable-image,
+[data-zoomable] {
+    cursor: zoom-in;
+}
+
+.zoomable-image:focus-visible,
+[data-zoomable]:focus-visible {
+    outline: 3px solid var(--orange, #bd6b38);
+    outline-offset: 4px;
+}
+
+/* Related species cards */
+.related-species {
+    margin: 3rem 0;
+}
+
+.related-species-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+}
+
+.related-species-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line, #d8d0c5);
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+    background: var(--paper, #f5f0e7);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.related-species-card:hover {
+    border-color: var(--orange, #bd6b38);
+    transform: translateY(-2px);
+}
+
+.related-species-name {
+    font-weight: 700;
+}
+
+.related-species-scientific {
+    color: var(--muted, #756e67);
+    font-size: 0.92rem;
+}
+
+/* Image zoom overlay */
+.image-zoom {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem 2rem 4.5rem;
+    background: rgba(12, 12, 16, 0.94);
+    cursor: zoom-out;
+}
+
+.image-zoom.active {
+    display: flex;
+}
+
+.image-zoom img {
+    display: block;
+    max-width: 95vw;
+    max-height: 84vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.45);
+    cursor: default;
+}
+
+.close-zoom {
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.close-zoom:hover {
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.zoom-caption {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.65rem;
+    left: 1rem;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 0.92rem;
+}
+
+body.image-zoom-open {
+    overflow: hidden;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: 4rem;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--line, #d8d0c5);
+    text-align: center;
+}
+
+.site-footer h3 {
+    margin: 0 0 0.4rem;
+    font-family: var(--heading-font, Georgia, serif);
+}
+
+.site-footer p {
+    margin: 0.35rem 0;
+    color: var(--muted, #756e67);
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+    .species-overview {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .quick-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .species-article {
+        width: min(100% - 1.25rem, 1180px);
+        margin-top: 1.5rem;
+    }
+
+    .quick-facts {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .taxonomy-row {
+        grid-template-columns: minmax(80px, 0.7fr) minmax(0, 1.3fr);
+    }
+
+    .image-zoom {
+        padding: 3.5rem 0.75rem 4rem;
+    }
+
+    .image-zoom img {
+        max-width: 98vw;
+        max-height: 80vh;
+    }
+}
