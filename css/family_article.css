@@ -1,0 +1,367 @@
+
+/* =========================================
+   FAMILY AND LINEAGE ARTICLES
+   ========================================= */
+
+.family-page {
+    background: var(--ivory);
+    min-height: 60vh;
+}
+
+.family-content-width {
+    width: min(1160px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+/* Article hero */
+
+.family-hero {
+    background: linear-gradient(120deg, #291d32, #493452);
+    color: var(--ivory);
+    padding: 65px 0;
+    border-bottom: 4px solid var(--orange);
+}
+
+.family-hero h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+    margin: 0;
+}
+
+.family-hero .species-eyebrow {
+    color: var(--gold);
+}
+
+.family-common-name {
+    color: #e5d9e8;
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-style: italic;
+    margin: 5px 0 20px;
+}
+
+.family-intro {
+    max-width: 800px;
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+.family-back-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--gold);
+}
+
+/* Main layout */
+
+.family-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 245px;
+    align-items: start;
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.family-article {
+    min-width: 0;
+    padding: clamp(22px, 4vw, 50px);
+    background: var(--paper);
+    border: 1px solid var(--line);
+}
+
+.family-section {
+    margin-top: 45px;
+    scroll-margin-top: 25px;
+}
+
+.family-section h2 {
+    color: var(--plum);
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 12px;
+    margin-top: 0;
+}
+
+.family-section p {
+    line-height: 1.8;
+}
+
+/* Classification panel */
+
+.classification-box {
+    background: #f1e9df;
+    padding: 25px;
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--orange);
+}
+
+.classification-box h2 {
+    margin-top: 0;
+    color: var(--plum);
+    font-size: 1.9rem;
+}
+
+.classification-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.05rem;
+    line-height: 1.45;
+}
+
+.classification-table th,
+.classification-table td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid #d9cbbd;
+    vertical-align: top;
+}
+
+.classification-table th {
+    width: 36%;
+    color: var(--plum);
+    font-weight: 600;
+}
+
+.classification-table td {
+    overflow-wrap: anywhere;
+}
+
+.classification-note {
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Species cards inside family articles */
+
+.family-species-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.family-species-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 22px;
+    background: #fbf7f0;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--violet);
+}
+
+.family-species-group {
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+}
+
+.family-species-card h3 {
+    color: var(--plum);
+    font-size: 1.7rem;
+    margin: 9px 0 0;
+}
+
+.family-species-scientific {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 4px 0 12px;
+}
+
+.family-species-card p:not(.family-species-scientific) {
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+.family-species-card a {
+    margin-top: auto;
+    padding-top: 12px;
+    font-weight: 600;
+}
+
+/* Sidebar */
+
+.family-sidebar {
+    padding: 23px;
+    background: #ebe2d7;
+    border: 1px solid var(--line);
+    position: sticky;
+    top: 20px;
+}
+
+.family-sidebar h2 {
+    font-size: 1.8rem;
+    color: var(--plum);
+    margin-top: 0;
+}
+
+.family-sidebar h3 {
+    color: var(--plum);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.family-sidebar a {
+    display: block;
+    padding: 9px 0;
+    border-bottom: 1px solid #d5c7b8;
+    line-height: 1.4;
+}
+
+.family-sidebar-divider {
+    height: 1px;
+    background: #cbbbad;
+    margin: 24px 0;
+}
+
+/* Return links */
+
+.family-return {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 0 0 50px;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+    .family-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .family-sidebar {
+        position: static;
+        order: -1;
+    }
+}
+
+@media (max-width: 560px) {
+    .family-content-width,
+    .family-return {
+        width: calc(100% - 28px);
+    }
+
+    .family-species-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .classification-box {
+        padding: 15px;
+    }
+
+    .classification-table th,
+    .classification-table td {
+        padding: 8px 6px;
+    }
+
+    .family-return {
+        flex-direction: column;
+    }
+}
+
+/* Article images */
+.article-image {
+    margin: 1.5rem 0;
+}
+
+.article-image img,
+.species-main-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+}
+
+.article-image img {
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
+}
+
+.article-image img:hover {
+    transform: scale(1.01);
+}
+
+.article-image figcaption {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Full-screen image viewer */
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background: rgba(12, 12, 16, 0.92);
+    cursor: zoom-out;
+}
+
+.image-lightbox.is-open {
+    display: flex;
+}
+
+.image-lightbox img {
+    display: block;
+    max-width: 95vw;
+    max-height: 88vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.4);
+    cursor: default;
+}
+
+.image-lightbox-caption {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.image-lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .image-lightbox {
+        padding: 1rem;
+    }
+
+    .image-lightbox img {
+        max-width: 96vw;
+        max-height: 80vh;
+    }
+}

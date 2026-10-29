@@ -3,70 +3,763 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Species | The Kaimere Encyclopedia</title>
+        <meta name="description"
+            content="Explore the animals of Kaimere through a searchable directory of taxonomic groups, families, and evolutionary lineages.">
+        <title>Species Directory | The Kaimere Encyclopedia</title>
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/species.css">
         <script src="../js/main.js" defer></script>
+        <script src="../js/species-directory.js" defer></script>
     </head>
 
-    <body>
+    <body
+        data-page="species"
+        data-title="Species"
+        data-subtitle="The diversity of the living world"
+        data-kicker="The Kaimere Encyclopedia"
+    >
+        <div data-site-header data-root="../"></div>
+        <div data-site-nav data-root="../"></div>
 
-        <header class="site-header">
-            <div class="site-kicker">The Kaimere Encyclopedia</div>
-            <h1 class="site-title">Species</h1>
-            <p class="site-subtitle">The Diversity of the Living World</p>
-        </header>
+        <main class="species-directory-page">
 
-        <nav class="main-nav" aria-label="Main navigation">
-            <div class="nav-inner">
-                <a href="../index.html">Home</a>
-                <a href="species.html" aria-current="page">Species</a>
-                <a href="regions.html">Regions</a>
-                <a href="evolution.html">Evolution</a>
-                <a href="taxonomy.html">Taxonomy</a>
-                <a href="people-culture.html">People &amp; Culture</a>
-                <a href="about-kaimere.html">About Kaimere</a>
-            </div>
-        </nav>
+            <!-- INTRODUCTION -->
+            <section class="species-hero">
+                <div class="species-hero-inner">
+                    <p class="species-eyebrow">
+                        ZOOLOGY &amp; NATURAL HISTORY
+                    </p>
 
-        <main class="container section">
-            <div class="eyebrow2">The Living World</div>
-            <h2 class="section-title">Species Directory</h2>
+                    <h1>The Living World of Kaimere</h1>
 
-            <p class="lead">
-                This directory catalogues the animals of Kaimere,
-                organized by their evolutionary relationships and
-                major taxonomic groups.
-            </p>
+                    <p class="species-hero-description">
+                        An illustrated catalogue of the animals that
+                        inhabit Kaimere: their diversity, evolutionary
+                        histories, ecological relationships, and place
+                        within the natural world.
+                    </p>
 
-            <div class="card-grid">
-                <article class="card">
-                    <h3>Mammals</h3>
-                    <p>Explore the mammalian lineages of Kaimere.</p>
-                </article>
+                    <a class="species-hero-link" href="#animal-directory">
+                        Explore the directory <span aria-hidden="true">↓</span>
+                    </a>
+                </div>
+            </section>
 
-                <article class="card">
-                    <h3>Reptiles</h3>
-                    <p>Discover the diversity of its reptilian fauna.</p>
-                </article>
+            <!-- DIRECTORY INTRODUCTION -->
+            <section class="species-introduction">
+                <div class="species-content-width">
+                    <p class="species-eyebrow">A GUIDE TO THE FAUNA</p>
 
-                <article class="card">
-                    <h3>Birds</h3>
-                    <p>Examine the avian inhabitants of its ecosystems.</p>
-                </article>
+                    <h2>Discover the animals of Kaimere</h2>
 
-                <article class="card">
-                    <h3>Fish</h3>
-                    <p>Explore the aquatic vertebrates of its waters.</p>
-                </article>
+                    <p class="species-lead">
+                        The fauna of Kaimere encompasses an extraordinary
+                        assemblage of introduced Earth organisms, their
+                        descendants, and endemic lineages that have evolved
+                        within the planet's distinctive environments.
+                    </p>
 
-                <article class="card">
-                    <h3>Invertebrates</h3>
-                    <p>Discover the many invertebrate groups of the planet.</p>
-                </article>
-            </div>
+                    <p>
+                        This directory organizes the encyclopedia's animal
+                        accounts into major groups and taxonomic lineages.
+                        Each group article provides an introduction to its
+                        classification, defining characteristics, evolutionary
+                        history, and known diversity. From there, readers
+                        can explore individual species and their natural histories.
+                    </p>
+
+                    <p>
+                        Search by common name, scientific name, or related
+                        term, or browse the directory alphabetically.
+                    </p>
+                </div>
+            </section>
+
+            <!-- CATEGORY SHORTCUTS -->
+            <section class="species-category-section">
+                <div class="species-content-width">
+                    <div class="species-section-heading">
+                        <p class="species-eyebrow">CLASSIFICATION</p>
+                        <h2>Browse by animal group</h2>
+                        <p>
+                            Begin with a major group to narrow the directory
+                            to a particular branch of the animal kingdom.
+                        </p>
+                    </div>
+
+                    <div class="species-category-grid">
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="dinosaurs">
+                            <span class="category-number">01</span>
+                            <span class="category-name">Dinosaurs</span>
+                            <span class="category-description">
+                                Theropods, sauropods, and ornithischians
+                            </span>
+                        </button>
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="mammals">
+                            <span class="category-number">02</span>
+                            <span class="category-name">Mammals</span>
+                            <span class="category-description">
+                                Carnivores, ungulates, and other mammals
+                            </span>
+                        </button>
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="reptiles">
+                            <span class="category-number">03</span>
+                            <span class="category-name">Other reptiles</span>
+                            <span class="category-description">
+                                Crocodylians, lizards, and other reptiles
+                            </span>
+                        </button>
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="birds">
+                            <span class="category-number">04</span>
+                            <span class="category-name">Birds</span>
+                            <span class="category-description">
+                                Avian lineages and their descendants
+                            </span>
+                        </button>
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="pterosaurs">
+                            <span class="category-number">05</span>
+                            <span class="category-name">Pterosaurs</span>
+                            <span class="category-description">
+                                Flying reptiles and their radiations
+                            </span>
+                        </button>
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="fish">
+                            <span class="category-number">06</span>
+                            <span class="category-name">Fish</span>
+                            <span class="category-description">
+                                Aquatic vertebrates and marine lineages
+                            </span>
+                        </button>
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="synapsids">
+                            <span class="category-number">07</span>
+                            <span class="category-name">Other synapsids</span>
+                            <span class="category-description">
+                                Therapsids and non-mammalian synapsids
+                            </span>
+                        </button>
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="arthropods">
+                            <span class="category-number">08</span>
+                            <span class="category-name">Arthropods</span>
+                            <span class="category-description">
+                                Trilobites and other segmented animals
+                            </span>
+                        </button>
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="basal-tetrapods">
+                            <span class="category-number">09</span>
+                            <span class="category-name">Endemic tetrapods</span>
+                            <span class="category-description">
+                                Native lineages of terrestrial vertebrates
+                            </span>
+                        </button>
+
+                        <button class="species-category"
+                                type="button" data-category-shortcut="invertebrates">
+                            <span class="category-number">10</span>
+                            <span class="category-name">Other invertebrates</span>
+                            <span class="category-description">
+                                Invertebrate groups beyond arthropods
+                            </span>
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEARCH AND FILTERS -->
+            <section class="species-search-section"
+                    id="animal-directory">
+                <div class="species-content-width">
+
+                    <p class="species-eyebrow">THE ENCYCLOPEDIA INDEX</p>
+                    <h2>Animal groups and families</h2>
+
+                    <p>
+                        Explore recognized families, orders, and evolutionary
+                        lineages. Each entry leads to a dedicated article
+                        documenting the group and its constituent species.
+                    </p>
+
+                    <div class="species-search-controls">
+
+                        <div class="species-search-field">
+                            <label for="speciesSearch">
+                                Search the directory
+                            </label>
+
+                            <input
+                                type="search"
+                                id="speciesSearch"
+                                placeholder="Try Felidae, cats, or Megaraptora..."
+                                autocomplete="off"
+                            >
+                        </div>
+
+                        <div class="species-search-field">
+                            <label for="speciesCategory">
+                                Animal group
+                            </label>
+
+                            <select id="speciesCategory">
+                                <option value="all">All animal groups</option>
+                                <option value="dinosaurs">Dinosaurs</option>
+                                <option value="mammals">Mammals</option>
+                                <option value="reptiles">Other reptiles</option>
+                                <option value="birds">Birds</option>
+                                <option value="pterosaurs">Pterosaurs</option>
+                                <option value="fish">Fish</option>
+                                <option value="synapsids">Other synapsids</option>
+                                <option value="arthropods">Arthropods</option>
+                                <option value="basal-tetrapods">Endemic tetrapods</option>
+                                <option value="invertebrates">Other invertebrates</option>
+                            </select>
+                        </div>
+
+                        <div class="species-search-field">
+                            <label for="speciesSort">Sort entries</label>
+
+                            <select id="speciesSort">
+                                <option value="az">Alphabetical: A–Z</option>
+                                <option value="za">Alphabetical: Z–A</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="species-directory-status">
+                        <p id="speciesCount" aria-live="polite">
+                            Loading directory...
+                        </p>
+
+                        <button id="speciesReset" class="species-reset"
+                                type="button">
+                            Reset filters
+                        </button>
+                    </div>
+
+                    <nav class="species-alphabet"
+                        aria-label="Filter entries by first letter">
+                        <button type="button" data-letter="all"
+                                aria-pressed="true">All</button>
+                        <button type="button" data-letter="a">A</button>
+                        <button type="button" data-letter="b">B</button>
+                        <button type="button" data-letter="c">C</button>
+                        <button type="button" data-letter="d">D</button>
+                        <button type="button" data-letter="e">E</button>
+                        <button type="button" data-letter="f">F</button>
+                        <button type="button" data-letter="g">G</button>
+                        <button type="button" data-letter="h">H</button>
+                        <button type="button" data-letter="i">I</button>
+                        <button type="button" data-letter="j">J</button>
+                        <button type="button" data-letter="k">K</button>
+                        <button type="button" data-letter="l">L</button>
+                        <button type="button" data-letter="m">M</button>
+                        <button type="button" data-letter="n">N</button>
+                        <button type="button" data-letter="o">O</button>
+                        <button type="button" data-letter="p">P</button>
+                        <button type="button" data-letter="q">Q</button>
+                        <button type="button" data-letter="r">R</button>
+                        <button type="button" data-letter="s">S</button>
+                        <button type="button" data-letter="t">T</button>
+                        <button type="button" data-letter="u">U</button>
+                        <button type="button" data-letter="v">V</button>
+                        <button type="button" data-letter="w">W</button>
+                        <button type="button" data-letter="x">X</button>
+                        <button type="button" data-letter="y">Y</button>
+                        <button type="button" data-letter="z">Z</button>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- DIRECTORY ENTRIES -->
+
+            <section class="species-directory-list">
+                <div class="species-content-width">
+
+                    <div id="speciesGrid" class="species-entry-grid">
+
+                        <!-- MAMMALS -->
+
+                        <!-- CANIDS -->
+                        <article class="species-entry"
+                            data-name="Canids"
+                            data-scientific="Canidae"
+                            data-category="mammals"
+                            data-type="Family"
+                            data-search="dogs wolves foxes carnivora predators omnivores"
+                            data-url="../taxonomy/mammal-families/canidae.html">
+
+                            <span class="species-entry-label">Mammals · Family</span>
+                            <h3>Canids</h3>
+                            <p class="species-scientific"><i>Canidae</i></p>
+                            <p class="species-entry-description">
+                                A diverse family of carnivorous mammals that
+                                includes dogs, wolves, foxes, and related
+                                forms, occupying ecological roles from
+                                omnivorous generalists to pursuit predators.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Carnivora</span>
+                                <span>Predators and omnivores</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/mammal-families/canidae.html">
+                                Explore family →
+                            </a>
+                        </article>
+
+                        <!-- CERVIDS -->
+                        <article class="species-entry"
+                            data-name="Cervids"
+                            data-scientific="Cervidae"
+                            data-category="mammals"
+                            data-type="Family"
+                            data-search="deer elk moose caribou ungulates ruminants antlers herbivores"
+                            data-url="../taxonomy/mammal-families/cervidae.html">
+
+                            <span class="species-entry-label">Mammals · Family</span>
+                            <h3>Cervids</h3>
+                            <p class="species-scientific"><i>Cervidae</i></p>
+                            <p class="species-entry-description">
+                                Ruminant mammals whose descendants inhabit
+                                Kaimere's forests, wetlands, grasslands,
+                                and mountain environments.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Artiodactyla</span>
+                                <span>Herbivores</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/mammal-families/cervidae.html">
+                                Explore family →
+                            </a>
+                        </article>
+
+                        <!-- CETACEANS -->
+                        <article class="species-entry"
+                            data-name="Cetaceans"
+                            data-scientific="Cetacea"
+                            data-category="mammals"
+                            data-type="Clade"
+                            data-search="whales dolphins porpoises marine aquatic mammals"
+                            data-url="../taxonomy/mammal-families/cetacea.html">
+
+                            <span class="species-entry-label">Mammals · Clade</span>
+                            <h3>Cetaceans</h3>
+                            <p class="species-scientific"><i>Cetacea</i></p>
+                            <p class="species-entry-description">
+                                Fully aquatic mammals ranging from small
+                                dolphins to enormous filter-feeding whales
+                                and specialized marine predators.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Artiodactyla</span>
+                                <span>Aquatic mammals</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/mammal-families/cetacea.html">
+                                Explore lineage →
+                            </a>
+                        </article>
+
+                        <!-- FELIDS -->
+                        <article class="species-entry"
+                            data-name="Felids"
+                            data-scientific="Felidae"
+                            data-category="mammals"
+                            data-type="Family"
+                            data-search="cats felines leopards lions tigers cheetahs pumas brakunze red panthers"
+                            data-url="../taxonomy/mammal-families/felidae.html">
+
+                            <span class="species-entry-label">Mammals · Family</span>
+                            <h3>Felids</h3>
+                            <p class="species-scientific"><i>Felidae</i></p>
+                            <p class="species-entry-description">
+                                A family of specialized carnivorous mammals
+                                encompassing the cats of Kaimere, including
+                                ambush predators, pursuit hunters, and
+                                several surviving saber-toothed lineages.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Carnivora</span>
+                                <span>Predatory mammals</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/fauna/vertebrates/mammals/carnivora/felidae.html">
+                                Explore family →
+                            </a>
+                        </article>
+
+                        <!-- HYAENODONTS -->
+                        <article class="species-entry"
+                            data-name="Hyaenodonts"
+                            data-scientific="Hyaenodonta"
+                            data-category="mammals"
+                            data-type="Order"
+                            data-search="hyaenodonts renzhuyo predators carnivorous mammals terrestrial aquatic"
+                            data-url="../taxonomy/mammal-families/hyaenodonta.html">
+                            <span class="species-entry-label">Mammals · Order</span>
+                            <h3>Hyaenodonts</h3>
+                            <p class="species-scientific"><i>Hyaenodonta</i></p>
+                            <p class="species-entry-description">
+                                An ancient radiation of predatory mammals
+                                represented in Kaimere by terrestrial and
+                                semiaquatic forms.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Extinct on Earth</span>
+                                <span>Carnivorous mammals</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/mammal-families/hyaenodonta.html">
+                                Explore lineage →
+                            </a>
+                        </article>
+
+                        <!-- MULTI'S -->
+                        <article class="species-entry"
+                            data-name="Multituberculates"
+                            data-scientific="Multituberculata"
+                            data-category="mammals"
+                            data-type="Clade"
+                            data-search="mammals multituberculate dentition molars ancient mammals"
+                            data-url="../taxonomy/mammal-families/multituberculata.html">
+
+                            <span class="species-entry-label">Mammals · Clade</span>
+                            <h3>Multituberculates</h3>
+                            <p class="species-scientific"><i>Multituberculata</i></p>
+                            <p class="species-entry-description">
+                                An ancient mammalian radiation distinguished
+                                by complex molars and a long evolutionary
+                                history across multiple environments.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Mammalia</span>
+                                <span>Specialized dentition</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/mammal-families/multituberculata.html">
+                                Explore lineage →
+                            </a>
+                        </article>
+
+
+                        <!-- DINOSAURS -->
+
+                        <article class="species-entry"
+                            data-name="Megaraptorans"
+                            data-scientific="Megaraptora"
+                            data-category="dinosaurs"
+                            data-type="Clade"
+                            data-search="megaraptorans megaraptors theropods predators large claws dinosaurs"
+                            data-url="../taxonomy/dinosaur-groups/megaraptora.html">
+
+                            <span class="species-entry-label">Dinosaurs · Clade</span>
+                            <h3>Megaraptorans</h3>
+                            <p class="species-scientific"><i>Megaraptora</i></p>
+                            <p class="species-entry-description">
+                                A lineage of predatory theropods associated
+                                with elongated forelimbs, powerful manual claws,
+                                and diverse evolutionary radiations.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Theropoda</span>
+                                <span>Predatory dinosaurs</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/dinosaur-groups/megaraptora.html">
+                                Explore clade →
+                            </a>
+                        </article>
+
+                        <article class="species-entry"
+                            data-name="Thescelosaurs"
+                            data-scientific="Thescelosauridae"
+                            data-category="dinosaurs"
+                            data-type="Family"
+                            data-search="ornithischians drakes herbivores omnivores dinosaurs"
+                            data-url="../taxonomy/dinosaur-groups/thescelosauridae.html">
+
+                            <span class="species-entry-label">Dinosaurs · Family</span>
+                            <h3>Thescelosaurs</h3>
+                            <p class="species-scientific"><i>Thescelosauridae</i></p>
+                            <p class="species-entry-description">
+                                A diverse dinosaurian lineage whose members
+                                developed a variety of body sizes and
+                                ecological specializations.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Ornithischia</span>
+                                <span>Herbivores and omnivores</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/dinosaur-groups/thescelosauridae.html">
+                                Explore lineage →
+                            </a>
+                        </article>
+
+                        <article class="species-entry"
+                            data-name="Titanosaurs"
+                            data-scientific="Titanosauria"
+                            data-category="dinosaurs"
+                            data-type="Clade"
+                            data-search="sauropods giant dinosaurs titans herbivores long necks"
+                            data-url="../taxonomy/dinosaur-groups/titanosauria.html">
+
+                            <span class="species-entry-label">Dinosaurs · Clade</span>
+                            <h3>Titanosaurs</h3>
+                            <p class="species-scientific"><i>Titanosauria</i></p>
+                            <p class="species-entry-description">
+                                A major sauropod radiation represented by
+                                enormous terrestrial herbivores across
+                                Kaimere's ecosystems.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Sauropoda</span>
+                                <span>Large herbivores</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/dinosaur-groups/titanosauria.html">
+                                Explore clade →
+                            </a>
+                        </article>
+
+                        <!-- BIRDS -->
+
+                        <article class="species-entry"
+                            data-name="Accipitriformes"
+                            data-scientific="Accipitriformes"
+                            data-category="birds"
+                            data-type="Order"
+                            data-search="hawks eagles vultures ospreys birds of prey"
+                            data-url="../taxonomy/bird-groups/accipitriformes.html">
+
+                            <span class="species-entry-label">Birds · Order</span>
+                            <h3>Accipitriformes</h3>
+                            <p class="species-scientific"><i>Accipitriformes</i></p>
+                            <p class="species-entry-description">
+                                A major order of predatory and scavenging
+                                birds encompassing hawks, eagles, and vultures.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Aves</span>
+                                <span>Predators and scavengers</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/bird-groups/accipitriformes.html">
+                                Explore order →
+                            </a>
+                        </article>
+
+                        <article class="species-entry"
+                            data-name="Cariamiformes"
+                            data-scientific="Cariamiformes"
+                            data-category="birds"
+                            data-type="Order"
+                            data-search="cariamae seriemas terror birds phorusrhacids flightless predators"
+                            data-url="../taxonomy/bird-groups/cariamiformes.html">
+
+                            <span class="species-entry-label">Birds · Order</span>
+                            <h3>Cariamiformes</h3>
+                            <p class="species-scientific"><i>Cariamiformes</i></p>
+                            <p class="species-entry-description">
+                                A lineage of land birds that includes seriemas
+                                and the extinct terror birds, with a history
+                                of specialized terrestrial predation.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Land birds</span>
+                                <span>Terrestrial predators</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/bird-groups/cariamiformes.html">
+                                Explore order →
+                            </a>
+                        </article>
+
+                        <!-- OTHER REPTILES -->
+
+                        <article class="species-entry"
+                            data-name="Crocodylians"
+                            data-scientific="Crocodylia"
+                            data-category="reptiles"
+                            data-type="Order"
+                            data-search="crocodiles alligators gharials crocodilians pseudosuchia"
+                            data-url="../taxonomy/reptile-groups/crocodylia.html">
+
+                            <span class="species-entry-label">Reptiles · Order</span>
+                            <h3>Crocodylians</h3>
+                            <p class="species-scientific"><i>Crocodylia</i></p>
+                            <p class="species-entry-description">
+                                Semiaquatic archosaurs occupying rivers,
+                                wetlands, estuaries, and other aquatic
+                                environments.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Archosauria</span>
+                                <span>Semiaquatic reptiles</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/reptile-groups/crocodylia.html">
+                                Explore order →
+                            </a>
+                        </article>
+
+                        <!-- PTEROSAURS -->
+
+                        <article class="species-entry"
+                            data-name="Azhdarchids"
+                            data-scientific="Azhdarchidae"
+                            data-category="pterosaurs"
+                            data-type="Family"
+                            data-search="azdarchids pterosaurs flying reptiles giant terrestrial foragers"
+                            data-url="../taxonomy/pterosaur-families/azhdarchidae.html">
+
+                            <span class="species-entry-label">Pterosaurs · Family</span>
+                            <h3>Azhdarchids</h3>
+                            <p class="species-scientific"><i>Azhdarchidae</i></p>
+                            <p class="species-entry-description">
+                                Long-necked pterosaurs that include some
+                                of the largest known flying animals and
+                                specialized terrestrial foragers.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Pterosauria</span>
+                                <span>Flying reptiles</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/pterosaur-families/azhdarchidae.html">
+                                Explore family →
+                            </a>
+                        </article>
+
+                        <!-- FISH -->
+
+                        <article class="species-entry"
+                            data-name="Sharks"
+                            data-scientific="Selachimorpha"
+                            data-category="fish"
+                            data-type="Group"
+                            data-search="sharks selachians cartilaginous fish marine predators"
+                            data-url="../taxonomy/fish-groups/sharks.html">
+
+                            <span class="species-entry-label">Fish · Group</span>
+                            <h3>Sharks</h3>
+                            <p class="species-scientific"><i>Selachimorpha</i></p>
+                            <p class="species-entry-description">
+                                A diverse assemblage of cartilaginous fishes
+                                inhabiting coastal waters, reefs, open seas,
+                                and other marine environments.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Chondrichthyes</span>
+                                <span>Aquatic predators</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/fish-groups/sharks.html">
+                                Explore group →
+                            </a>
+                        </article>
+
+                        <!-- ARTHROPODS -->
+
+                        <article class="species-entry"
+                            data-name="Trilobites"
+                            data-scientific="Trilobita"
+                            data-category="arthropods"
+                            data-type="Class"
+                            data-search="trilobites marine arthropods segmented animals ancient terrestrial"
+                            data-url="../taxonomy/arthropod-groups/trilobita.html">
+
+                            <span class="species-entry-label">Arthropods · Class</span>
+                            <h3>Trilobites</h3>
+                            <p class="species-scientific"><i>Trilobita</i></p>
+                            <p class="species-entry-description">
+                                An ancient arthropod group with a long marine
+                                history and a distinctive role in Kaimere's
+                                introduced fauna.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Arthropoda</span>
+                                <span>Segmented invertebrates</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/arthropod-groups/trilobita.html">
+                                Explore group →
+                            </a>
+                        </article>
+
+                        <!-- ENDEMIC LINEAGES -->
+
+                        <article class="species-entry"
+                            data-name="Carbosuchians"
+                            data-scientific="Carbosuchia"
+                            data-category="basal-tetrapods"
+                            data-type="Clade"
+                            data-search="native endemic tetrapods semiaquatic ambush predators"
+                            data-url="../taxonomy/endemic-groups/carbosuchia.html">
+
+                            <span class="species-entry-label">Endemic tetrapods · Clade</span>
+                            <h3>Carbosuchians</h3>
+                            <p class="species-scientific"><i>Carbosuchia</i></p>
+                            <p class="species-entry-description">
+                                An endemic lineage of tetrapods associated
+                                with semiaquatic ancestry and the ecological
+                                opportunities of Kaimere's wetlands.
+                            </p>
+                            <div class="species-entry-meta">
+                                <span>Endemic lineage</span>
+                                <span>Aquatic and terrestrial niches</span>
+                            </div>
+                            <a class="species-entry-link"
+                            href="../taxonomy/endemic-groups/carbosuchia.html">
+                                Explore clade →
+                            </a>
+                        </article>
+
+                    </div>
+
+                    <p id="speciesEmpty" class="species-no-results"
+                    role="status" hidden>
+                        No entries match your search. Try another name,
+                        letter, or animal group.
+                    </p>
+
+                </div>
+            </section>
+
+            <section class="species-directory-note">
+                <div class="species-content-width">
+                    <h2>Understanding the directory</h2>
+                    <p>
+                        Entries may represent formally ranked taxa,
+                        unranked evolutionary clades, or broader groups
+                        used to organize the encyclopedia. Their labels
+                        indicate the type of account provided; they do
+                        not imply that every entry represents a family.
+                    </p>
+                </div>
+            </section>
+
         </main>
 
-        <div id="site-footer"></div>
-
+        <div data-site-footer data-root="../"></div>
     </body>
 </html>
