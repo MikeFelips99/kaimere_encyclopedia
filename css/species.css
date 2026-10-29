@@ -369,6 +369,15 @@
     border: 1px solid var(--line);
 }
 
+/* Ensure JavaScript filters can hide directory cards */
+.species-entry[hidden] {
+    display: none !important;
+}
+
+.species-no-results[hidden] {
+    display: none !important;
+}
+
 /* Closing note */
 
 .species-directory-note {
