@@ -24,7 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function openLightbox(image) {
         previousFocus = document.activeElement;
 
-        enlargedImage.src = image.currentSrc || image.src;
+        enlargedImage.src =
+            image.dataset.fullImage ||
+            image.currentSrc ||
+            image.src;
         enlargedImage.alt = image.alt || "";
 
         const figure = image.closest("figure");
@@ -51,13 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("click", event => {
         const image = event.target.closest(
-            ".article-image img, .zoomable-image"
-        );
+        ".article-image img, .zoomable-image, .species-main-image img"
+    );
 
-        if (image && !lightbox.contains(image)) {
-            openLightbox(image);
-        }
-    });
+    if (image && !lightbox.contains(image)) {
+        console.log("Lightbox image clicked:", image);
+        openLightbox(image);
+    }
+});
 
     closeButton.addEventListener("click", closeLightbox);
 

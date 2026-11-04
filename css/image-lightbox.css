@@ -1,0 +1,72 @@
+/* =========================================================
+   IMAGE LIGHTBOX
+   ========================================================= */
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(20, 15, 25, 0.92);
+    padding: 2rem;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 99999;
+    transition: opacity 0.25s ease,
+                visibility 0.25s ease;
+}
+
+/* Lightbox opened */
+.image-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Image and caption container behavior */
+.image-lightbox img {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Caption */
+.image-lightbox-caption {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 80vw;
+    color: #f5eee5;
+    text-align: center;
+}
+
+/* Close button */
+.image-lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    color: #f5eee5;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+.image-lightbox-close:hover {
+    color: #d9a86c;
+}
+
+/* Prevent background scrolling */
+body.lightbox-open {
+    overflow: hidden;
+}
