@@ -28,7 +28,7 @@
 }
 
 .species-hero .species-eyebrow {
-    color: var(--gold);
+    color: var(--orange);
 }
 
 .species-common-name {
@@ -207,12 +207,8 @@
 }
 
 .species-eyebrow {
-    color: var(--orange);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+    color: var(--gold);
     text-transform: uppercase;
-    margin-bottom: 8px;
 }
 
 /* Nested subsections */
